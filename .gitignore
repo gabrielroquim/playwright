@@ -1,8 +1,48 @@
-
-# Playwright
+# --- Node.js & Dependências ---
 node_modules/
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
-/playwright/.auth/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
+
+# --- Playwright (Artefatos de Teste) ---
+# Pasta de resultados de testes, vídeos, traces e capturas de tela
+playwright-report/
+blob-report/
+test-results/
+playwright-results/
+videos/
+screenshots/
+traces/
+
+# --- Navegadores (Playwright browsers) ---
+# Evita baixar novamente os navegadores se compartilhados no projeto
+ms-playwright/
+
+# --- Environment & Secrets (Crucial) ---
+# Arquivos que contêm credenciais, URLs de staging, chaves API
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+secrets.json
+
+# --- IDEs / Editores ---
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# --- Cache ---
+.eslintcache
+.stylelintcache
+.cache/
+
+# --- Outros ---
+.DS_Store
+*.log

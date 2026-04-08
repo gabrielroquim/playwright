@@ -1,34 +1,42 @@
+const { expect } = require('@playwright/test')
+
 export class LandingPage {
-    async visit() {
-        await page.goto('http://localhost:3000');
+    constructor(page) {
+        this.page = page;
     }
 
+    async visit() {
+        await this.page.goto('http://localhost:3000');
+    }
 
     async openLeadModal() {
         // getByRole é a forma mais recomendada pelo Playwright
-        await page.getByRole('button', { name: /Aperte o play/ }).click();
+        await this.page.getByRole('button', { name: /Aperte o play/ }).click();
 
         await expect(
-            page.getByTestId('modal').getByRole('heading')
+            this.page.getByTestId('modal').getByRole('heading')
         ).toHaveText('Fila de espera');
 
     }
 
-    async submitLeadForm() {
+    async submitLeadForm(name, email) {
         // getByPlaceholder é prático quando o input tem um placeholder descritivo
-        await page.getByPlaceholder('informe seu nome').fill('gabs qa')
-        await page.getByPlaceholder('informe seu email').fill('gabs.qa@qualidade.com')
+        await this.page.getByPlaceholder('informe seu nome').fill(name)
+        await this.page.getByPlaceholder('informe seu email').fill(email)
 
         //em vez de usar xpath, podemos usar getByText para localizar o botão pelo texto visível
-        await page.getByTestId('modal')
+        await this.page.getByTestId('modal')
             .getByText('Quero entrar na fila!').click()
     }
 
-    async toastHaveText() {
-        const message = 'Agradecemos por compartilhar seus dados conosco. Em breve, nossa equipe entrará em contato!'
-        await expect(page.locator('.toast')).toHaveText(message)
+    async toastHaveText(message) {
+        const toast = this.page.locator('.toast')
 
-        await expect(page.locator('.toast')).toBeHidden({ timeout: 5000 })
+        await expect(toast).toHaveText(message)
+        await expect(toast).toBeHidden({ timeout: 5000 })
     }
 
+    async alertHaveText(target) {
+        await expect(this.page.locator('.alert')).toHaveText(target)
+    }
 }
