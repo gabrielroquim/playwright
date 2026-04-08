@@ -1,4 +1,7 @@
 // @ts-check
+import { test, expect } from '@playwright/test';
+
+
 // =============================================================================
 // FORMAS DE LOCALIZAR ELEMENTOS NO PLAYWRIGHT
 // =============================================================================
@@ -41,20 +44,29 @@
 // const content = await page.content()
 // console.log(content), ai vc vai ver no console log copia o html cria uma pasta modal e coloca esse html lá, ai vc pode abrir esse html no navegador e inspecionar o elemento do toast para criar um locator mais robusto, por exemplo usando a classe do toast ou o texto do toast
 // ==================================================
-import { test, expect } from '@playwright/test';
-import { LandingPage } from './pages/LandingPage'
 
 test('deve cadastrar um novo lead na fila de espera', async ({ page }) => {
-const landingPage = new LandingPage();
+  await page.goto('http://localhost:3000');
 
-async landingPage.visit();
-async landingPage.openLeadModal();
-async landingPage.submitLeadForm();
-async landingPage.toastHaveText();
+  // getByRole é a forma mais recomendada pelo Playwright
+  await page.getByRole('button', { name: /Aperte o play/ }).click();
 
+  await expect(
+    page.getByTestId('modal').getByRole('heading')
+  ).toHaveText('Fila de espera');
 
+  // getByPlaceholder é prático quando o input tem um placeholder descritivo
+  await page.getByPlaceholder('Seu nome completo').fill('gabs qa')
+  await page.getByPlaceholder('Seu email').fill('gabs.qa@qualidade.com')
 
+  //em vez de usar xpath, podemos usar getByText para localizar o botão pelo texto visível
+  await page.getByTestId('modal')
+    .getByText('Quero entrar na fila!').click()
 
+  const message = 'Agradecemos por compartilhar seus dados conosco. Em breve, nossa equipe entrará em contato!'
+  await expect(page.locator('.toast')).toHaveText(message)
+
+  await expect(page.locator('.toast')).toBeHidden({ timeout: 5000 })
 
   //await page.getByText('seus dados conosco').click()
   //const content = await page.content()
@@ -73,8 +85,8 @@ test('nao deve cadastrar com email incorreto', async ({ page }) => {
   ).toHaveText('Fila de espera');
 
   // getByPlaceholder é prático quando o input tem um placeholder descritivo
-  await page.getByPlaceholder('informe seu nome').fill('gabs qa')
-  await page.getByPlaceholder('informe seu email').fill('gabriel.com.br')
+  await page.getByPlaceholder('Seu nome completo').fill('gabs qa')
+  await page.getByPlaceholder('Seu email').fill('gabriel.com.br')
 
   //em vez de usar xpath, podemos usar getByText para localizar o botão pelo texto visível
   await page.getByTestId('modal')
@@ -95,7 +107,7 @@ test('nao deve cadastrar quando o nome não é informado', async ({ page }) => {
   ).toHaveText('Fila de espera');
 
   // getByPlaceholder é prático quando o input tem um placeholder descritivo
-  await page.getByPlaceholder('informe seu email').fill('gabriel@qacom.br')
+  await page.getByPlaceholder('Seu email').fill('gabriel@qacom.br')
 
   //em vez de usar xpath, podemos usar getByText para localizar o botão pelo texto visível
   await page.getByTestId('modal')
@@ -104,6 +116,7 @@ test('nao deve cadastrar quando o nome não é informado', async ({ page }) => {
   await expect(page.locator('.alert')).toHaveText('Campo obrigatório')
 
 });
+
 
 test('nao deve cadastrar quando o email nao é informado', async ({ page }) => {
   await page.goto('http://localhost:3000');
@@ -116,7 +129,7 @@ test('nao deve cadastrar quando o email nao é informado', async ({ page }) => {
   ).toHaveText('Fila de espera');
 
   // getByPlaceholder é prático quando o input tem um placeholder descritivo
-  await page.getByPlaceholder('informe seu nome').fill('gabs qa')
+  await page.getByPlaceholder('Seu nome completo').fill('gabs qa')
   //em vez de usar xpath, podemos usar getByText para localizar o botão pelo texto visível
   await page.getByTestId('modal')
     .getByText('Quero entrar na fila!').click()
