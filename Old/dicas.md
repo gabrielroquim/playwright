@@ -40,3 +40,22 @@
 // const content = await page.content()
 // console.log(content), ai vc vai ver no console log copia o html cria uma pasta modal e coloca esse html lá, ai vc pode abrir esse html no navegador e inspecionar o elemento do toast para criar um locator mais robusto, por exemplo usando a classe do toast ou o texto do toast
 // ==================================================
+DICA
+  async alertHavetext(text) {
+        const alert = this.page.locator('span[class$=alert]')
+        await expect(alert).toHaveText(text)
+    }
+
+
+    // dica
+    // em vez de usar .password-alert e .email-alert, poderíamos usar um método genérico como alertHaveText, que recebe o seletor do alerta e o texto esperado, tornando o código mais reutilizável e evitando a necessidade de criar métodos específicos para cada tipo de alerta. Por exemplo: ESTSamos usando mesmo coigo duas vezes com o $ usamos somenyr uam vez 
+    //async alertHaveText(selector, text) {
+    //    const alert = this.page.locator(selector)
+    //    await expect(alert).toHaveText(text)
+    //}
+
+    //async alertEmailHaveText(text) {
+    //    const alert = this.page.locator('.email-alert')
+    //   await expect(alert).toHaveText(text)
+    // }
+}

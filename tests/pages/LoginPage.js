@@ -30,13 +30,9 @@ export class LoginPage {
         await expect(this.page).toHaveURL(/.*admin/)
     }
 
-    async alertEmailHaveText(text) {
-        const alert = this.page.locator('.email-alert')
+    async alertHavetext(text) {
+        const alert = this.page.locator('span[class$=alert]')
         await expect(alert).toHaveText(text)
     }
 
-    async alertPasswordHaveText(text) {
-        const alert = this.page.locator('.password-alert')
-        await expect(alert).toHaveText(text)
-    }
 }

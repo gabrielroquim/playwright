@@ -29,12 +29,12 @@ test('não deve logar quando email não é informado', async ({ page }) => {
     await loginPage.visit()
     await loginPage.submit('', 'wrongpassword')
    
-    await loginPage.alertEmailHaveText('Campo obrigatório')
+    await loginPage.alertHavetext('Campo obrigatório')
 })
 
 test('não deve logar quando senha não é informada', async ({ page }) => {
     await loginPage.visit()
     await loginPage.submit('admin@zombieplus.com', '')
    
-    await loginPage.alertPasswordHaveText('Campo obrigatório')
+    await loginPage.alertHavetext('Campo obrigatório')
 })
