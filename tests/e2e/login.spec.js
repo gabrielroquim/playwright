@@ -1,20 +1,24 @@
 import { test } from '@playwright/test'
-import { LoginPage } from '../pages/LoginPage'
 
+import { LoginPage } from '../pages/LoginPage'
+import { MoviePage } from '../pages/MoviePage'
 import { Toast } from '../pages/Components'
 
 let loginPage
 let toast
+let moviePage
+
 
 test.beforeEach(({ page }) => {
     loginPage = new LoginPage(page)
     toast = new Toast(page)
+    moviePage = new MoviePage(page)
 })
 
 test('deve logar como administrador', async ({ page }) => {
     await loginPage.visit()
     await loginPage.submit('admin@zombieplus.com', 'pwd123')
-    await loginPage.isLoggedIn()
+    await moviePage.isLoggedIn()
 })
 
 test('não deve logar com a senha incorreta', async ({ page }) => {
@@ -28,30 +32,30 @@ test('não deve logar com a senha incorreta', async ({ page }) => {
 test('não deve logar quando email é incorreto', async ({ page }) => {
     await loginPage.visit()
     await loginPage.submit('wwwwwwwwwzombieplus.com', 'wrongpassword')
-   
+
     await loginPage.alertHavetext('Email incorreto')
 })
 
 test('não deve logar quando email não é informado', async ({ page }) => {
     await loginPage.visit()
     await loginPage.submit('', 'wrongpassword')
-   
+
     await loginPage.alertHavetext('Campo obrigatório')
 })
 
 test('não deve logar quando senha não é informada', async ({ page }) => {
     await loginPage.visit()
     await loginPage.submit('admin@zombieplus.com', '')
-   
+
     await loginPage.alertHavetext('Campo obrigatório')
 })
 
 test('não deve logar quando nenhum campo é informado', async ({ page }) => {
     await loginPage.visit()
     await loginPage.submit('', '')
-   
+
     await loginPage.alertHavetext([
-    'Campo obrigatório',
-    'Campo obrigatório'
-  ])
+        'Campo obrigatório',
+        'Campo obrigatório'
+    ])
 })
