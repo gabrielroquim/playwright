@@ -7,7 +7,7 @@ export class LoginPage {
     }
 
     async visit() {
-        await this.page.goto('http://localhost:3000/login')
+        await this.page.goto('http://localhost:3000/admin/login')
 
         const loginForm = this.page.locator('.login-form')
         await expect(loginForm).toBeVisible()
@@ -28,5 +28,12 @@ export class LoginPage {
         await this.page.waitForLoadState('networkidle')
         //expressao regular para verificar se a URL contém /admin, indicando que o usuário foi redirecionado para a área de administração após o login bem-sucedido
         await expect(this.page).toHaveURL(/.*admin/)
+    }
+
+    async toastHaveText(message) {
+        const toast = this.page.locator('.toast')
+
+        await expect(toast).toHaveText(message)
+        await expect(toast).toBeHidden({ timeout: 5000 })
     }
 }
