@@ -25,6 +25,13 @@ test('não deve logar com a senha incorreta', async ({ page }) => {
     await toast.haveText(message)
 })
 
+test('não deve logar quando email é incorreto', async ({ page }) => {
+    await loginPage.visit()
+    await loginPage.submit('wwwwwwwwwzombieplus.com', 'wrongpassword')
+   
+    await loginPage.alertHavetext('Email incorreto')
+})
+
 test('não deve logar quando email não é informado', async ({ page }) => {
     await loginPage.visit()
     await loginPage.submit('', 'wrongpassword')
@@ -37,4 +44,14 @@ test('não deve logar quando senha não é informada', async ({ page }) => {
     await loginPage.submit('admin@zombieplus.com', '')
    
     await loginPage.alertHavetext('Campo obrigatório')
+})
+
+test('não deve logar quando nenhum campo é informado', async ({ page }) => {
+    await loginPage.visit()
+    await loginPage.submit('', '')
+   
+    await loginPage.alertHavetext([
+    'Campo obrigatório',
+    'Campo obrigatório'
+  ])
 })
