@@ -20,7 +20,7 @@ export class LoginPage {
         //await loginPage.submit('      
         //await this.page.locator('//button[text()="Entrar"]').click()
 
-        // ou usar getByText para localizar o botão pelo seu papel e nome:
+        // ou usar getByText para localizar o botão pelos seu papel e nomes:
         await this.page.getByText('Entrar').click()
     }
 
