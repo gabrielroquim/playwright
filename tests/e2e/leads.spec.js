@@ -2,11 +2,15 @@
 
 import { test, expect } from '@playwright/test';
 import { LandingPage } from '../pages/LandingPage'
+import { Toast } from '../pages/Components'
 
 let landingPage
+let toast
+
 
 test.beforeEach(async ({ page }) => {
   landingPage = new LandingPage(page)
+  toast = new Toast(page)
 })
 
 test('deve cadastrar um novo lead na fila de espera', async ({ page }) => {
@@ -15,7 +19,7 @@ test('deve cadastrar um novo lead na fila de espera', async ({ page }) => {
   await landingPage.submitLeadForm('GabsQA qualidade', 'gabsqa@qualidades.com.br')
 
   const message = 'Agradecemos por compartilhar seus dados conosco. Em breve, nossa equipe entrará em contato!'
-  await landingPage.toastHaveText(message)
+  await toast.haveText(message)
 
 });
 
