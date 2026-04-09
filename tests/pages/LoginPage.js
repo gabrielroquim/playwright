@@ -30,10 +30,13 @@ export class LoginPage {
         await expect(this.page).toHaveURL(/.*admin/)
     }
 
-    async toastHaveText(message) {
-        const toast = this.page.locator('.toast')
+    async alertEmailHaveText(text) {
+        const alert = this.page.locator('.email-alert')
+        await expect(alert).toHaveText(text)
+    }
 
-        await expect(toast).toHaveText(message)
-        await expect(toast).toBeHidden({ timeout: 5000 })
+    async alertPasswordHaveText(text) {
+        const alert = this.page.locator('.password-alert')
+        await expect(alert).toHaveText(text)
     }
 }
