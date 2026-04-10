@@ -65,6 +65,3 @@ test('nao deve cadastrar quando nenhum campo é informado', async ({ page }) => 
   ]);
 
 });
-
-
-
