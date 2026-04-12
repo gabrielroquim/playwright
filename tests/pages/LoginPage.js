@@ -24,8 +24,6 @@ export class LoginPage {
         await this.page.getByText('Entrar').click()
     }
 
-
-
     async alertHavetext(text) {
         const alert = this.page.locator('span[class$=alert]')
         await expect(alert).toHaveText(text)

@@ -1,0 +1,162 @@
+{
+  "night_of_the_living_dead": {
+    "title": "Night of the Living Dead",
+    "overview": "Um grupo de pessoas se refugia em uma fazenda enquanto zumbis sedentos por sangue invadem a área.",
+    "company": "Image Ten",
+    "release_year": 1968,
+    "featured": false,
+    "cover": "assets/covers/night_of_the_living_dead.png"
+  },
+  "dawn_of_the_dead": {
+    "title": "Dawn of the Dead",
+    "overview": "Sobreviventes se abrigam em um grande shopping center enquanto a cidade é tomada por mortos-vivos.",
+    "company": "United Film Distribution Company",
+    "release_year": 1978,
+    "featured": false,
+    "cover": "assets/covers/dawn_of_the_dead.png"
+  },
+  "day_of_the_dead": {
+    "title": "Day of the Dead",
+    "overview": "Cientistas e militares lutam para sobreviver em instalações subterrâneas durante o apocalipse zumbi.",
+    "company": "United Film Distribution Company",
+    "release_year": 1985,
+    "featured": false,
+    "cover": "assets/covers/day_of_the_dead.png"
+  },
+  "28_days_later": {
+    "title": "28 Days Later",
+    "overview": "Um vírus altamente contagioso transforma a população em criaturas violentas e um pequeno grupo tenta encontrar refúgio.",
+    "company": "Fox Searchlight Pictures",
+    "release_year": 2002,
+    "featured": false,
+    "cover": "assets/covers/28_days_later.png"
+  },
+  "28_weeks_later": {
+    "title": "28 Weeks Later",
+    "overview": "Semanas após o surto, forças de reconstrução não conseguem controlar o retorno da epidemia.",
+    "company": "20th Century Fox",
+    "release_year": 2007,
+    "featured": false,
+    "cover": "assets/covers/28_weeks_later.png"
+  },
+  "shaun_of_the_dead": {
+    "title": "Shaun of the Dead",
+    "overview": "Comédia que acompanha um homem comum tentando salvar amigos e família durante uma invasão de zumbis.",
+    "company": "Universal Pictures",
+    "release_year": 2004,
+    "featured": false,
+    "cover": "assets/covers/shaun_of_the_dead.png"
+  },
+  "zombieland": {
+    "title": "Zombieland",
+    "overview": "Em um EUA pós-apocalíptico, um grupo forma alianças improváveis enquanto busca segurança e diversão.",
+    "company": "Columbia Pictures",
+    "release_year": 2009,
+    "featured": false,
+    "cover": "assets/covers/zombieland.png"
+  },
+  "zombieland_double_tap": {
+    "title": "Zombieland: Double Tap",
+    "overview": "Os mesmos sobreviventes enfrentam novos tipos de zumbis e desafios enquanto viajam pelo país.",
+    "company": "Columbia Pictures",
+    "release_year": 2019,
+    "featured": false,
+    "cover": "assets/covers/zombieland_double_tap.png"
+  },
+  "world_war_z": {
+    "title": "World War Z",
+    "overview": "Um ex-investigador da ONU tenta encontrar a origem da pandemia que transformou milhões em monstros.",
+    "company": "Paramount Pictures",
+    "release_year": 2013,
+    "featured": false,
+    "cover": "assets/covers/world_war_z.png"
+  },
+  "resident_evil": {
+    "title": "Resident Evil",
+    "overview": "Uma corporação secreta libera um vírus letal; uma equipe luta dentro de uma instalação para fechar a ameaça.",
+    "company": "Screen Gems",
+    "release_year": 2002,
+    "featured": false,
+    "cover": "assets/covers/resident_evil.png"
+  },
+  "resident_evil_apocalypse": {
+    "title": "Resident Evil: Apocalypse",
+    "overview": "A cidade está isolada e os sobreviventes devem encontrar uma saída enquanto a epidemia se espalha.",
+    "company": "Screen Gems",
+    "release_year": 2004,
+    "featured": false,
+    "cover": "assets/covers/resident_evil_apocalypse.png"
+  },
+  "train_to_busan": {
+    "title": "Train to Busan",
+    "overview": "Passageiros em um trem lutam para sobreviver quando um surto zumbi explode durante a viagem.",
+    "company": "Next Entertainment World",
+    "release_year": 2016,
+    "featured": false,
+    "cover": "assets/covers/train_to_busan.png"
+  },
+  "peninsula": {
+    "title": "Peninsula",
+    "overview": "Sequência de Train to Busan: um ex-soldado retorna a uma Coreia devastada para recuperar algo valioso.",
+    "company": "Showbox",
+    "release_year": 2020,
+    "featured": false,
+    "cover": "assets/covers/peninsula.png"
+  },
+  "rec": {
+    "title": "REC",
+    "overview": "Um documentarista acompanha bombeiros em um prédio trancado onde algo terrível está acontecendo.",
+    "company": "Filmax",
+    "release_year": 2007,
+    "featured": false,
+    "cover": "assets/covers/rec.png"
+  },
+  "the_girl_with_all_the_gifts": {
+    "title": "The Girl with All the Gifts",
+    "overview": "Em um futuro sombrio, uma garota especial pode ser a chave para a sobrevivência humana.",
+    "company": "Entertainment One",
+    "release_year": 2016,
+    "featured": false,
+    "cover": "assets/covers/the_girl_with_all_the_gifts.png"
+  },
+  "train_to_busan_presents_peninsula": {
+    "title": "Train to Busan Presents: Peninsula",
+    "overview": "Ação e sobrevivência em uma península devastada por zumbis.",
+    "company": "Next Entertainment World",
+    "release_year": 2020,
+    "featured": false,
+    "cover": "assets/covers/peninsula_alt.png"
+  },
+  "return_of_the_living_dead": {
+    "title": "Return of the Living Dead",
+    "overview": "Zumbis que falam e procuram por cérebros criam caos numa trama que mistura terror e humor.",
+    "company": "New World Pictures",
+    "release_year": 1985,
+    "featured": false,
+    "cover": "assets/covers/return_of_the_living_dead.png"
+  },
+  "day_of_the_triffids_zombie_like": {
+    "title": "Day of the Triffids (zombie-like)",
+    "overview": "Embora não estritamente zumbi, uma catástrofe transforma a sociedade e cria monochromic threats.",
+    "company": "British Lion",
+    "release_year": 1963,
+    "featured": false,
+    "cover": "assets/covers/day_of_the_triffids.png"
+  },
+  "i_am_legend": {
+    "title": "I Am Legend",
+    "overview": "Um homem luta para sobreviver em uma cidade infestada por criaturas semelhantes a zumbis.",
+    "company": "Warner Bros.",
+    "release_year": 2007,
+    "featured": false,
+    "cover": "assets/covers/i_am_legend.png"
+  },
+  "the_crazies": {
+    "title": "The Crazies",
+    "overview": "Uma cidade é infectada por um agente que torna os habitantes violentos e irracionais.",
+    "company": "Universal Pictures",
+    "release_year": 2010,
+    "featured": false,
+    "cover": "assets/covers/the_crazies.png"
+  }
+}
