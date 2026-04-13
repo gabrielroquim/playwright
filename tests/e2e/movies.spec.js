@@ -19,5 +19,5 @@ test('deve cadastrar um novo filme', async ({ page }) => {
   await loginPage.submit('admin@zombieplus.com', 'pwd123')
   await moviesPage.isLoggedIn()
 
-  await moviesPage.create('The Walking Dead', 'A série acompanha um grupo de sobreviventes em um mundo pós-apocalíptico dominado por zumbis, conhecidos como "walkers". O grupo é liderado por Rick Grimes, um ex-policial que acorda de um coma para descobrir que o mundo mudou drasticamente. Juntos, eles enfrentam desafios constantes, como a escassez de recursos, a ameaça dos walkers e a luta pela sobrevivência em meio a outros grupos de humanos hostis.', 'AMC Studios', 2010)
+  await moviesPage.create('The Walking Dead', 'A série acompanha um grupo de sobreviventes em um mundo pós-apocalíptico dominado por zumbis, conhecidos como "walkers". O grupo é liderado por Rick Grimes, um ex-policial que acorda de um coma para descobrir que o mundo mudou drasticamente. Juntos, eles enfrentam desafios constantes, como a escassez de recursos, a ameaça dos walkers e a luta pela sobrevivência em meio a outros grupos de humanos hostis.', 'Lionsgate Films', 2010)
 })
