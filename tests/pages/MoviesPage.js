@@ -28,8 +28,11 @@ export class MoviesPage {
         await this.page.locator('#select_year .react-select__indicator')
             .click()
 
-        await this.page.locator('.react-select__option')
-            .filter({ hasText: release_year})
+        await this.page.locator('#select_year .react-select__option')
+            .filter({ hasText: String(release_year) })
+            .click()
+
+        await this.page.getByRole('button', { name: 'Cadastrar' })
             .click()
         //DICA vc quer pegar o log do que está acontecendo na página, para isso vc pode usar o console.log para imprimir o conteúdo da página, ou seja, o HTML da página, para isso vc pode usar o método content() do page, que retorna o HTML da página, e depois imprimir esse HTML no console, assim vc consegue ver o que está acontecendo na página e identificar possíveis erros ou problemas
         // const html = await this.page.content()

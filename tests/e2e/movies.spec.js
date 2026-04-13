@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test'
+import data from '../support/fixtures/movies.json' assert { type: 'json' }
 
 import { LoginPage } from '../pages/LoginPage'
 import { MoviesPage } from '../pages/MoviesPage'
@@ -15,9 +16,12 @@ test.beforeEach(({ page }) => {
 })
 
 test('deve cadastrar um novo filme', async ({ page }) => {
+  const movie = data.create
   await loginPage.visit()
   await loginPage.submit('admin@zombieplus.com', 'pwd123')
   await moviesPage.isLoggedIn()
 
-  await moviesPage.create('The Walking Dead', 'A série acompanha um grupo de sobreviventes em um mundo pós-apocalíptico dominado por zumbis, conhecidos como "walkers". O grupo é liderado por Rick Grimes, um ex-policial que acorda de um coma para descobrir que o mundo mudou drasticamente. Juntos, eles enfrentam desafios constantes, como a escassez de recursos, a ameaça dos walkers e a luta pela sobrevivência em meio a outros grupos de humanos hostis.', 'Lionsgate Films', 2010)
+  await moviesPage.create(movie.title, movie.overview, movie.company, movie.release_year)
+
+  await toast.haveText('UhullCadastro realizado com sucesso!')
 })
