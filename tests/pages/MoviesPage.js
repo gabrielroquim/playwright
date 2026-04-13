@@ -11,5 +11,9 @@ export class MoviesPage {
         await expect(this.page).toHaveURL(/.*admin/)
     }
 
-}
+    async create(title, overview, company, release_year) {
 
+        await this.page.locator('a[href$="rgister"]').click()
+    }
+
+}
