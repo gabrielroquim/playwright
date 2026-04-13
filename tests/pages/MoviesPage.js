@@ -13,7 +13,10 @@ export class MoviesPage {
 
     async create(title, overview, company, release_year) {
 
-        await this.page.locator('a[href$="rgister"]').click()
+        await this.page.locator('a[href$="register"]').click()
+
+        await this.page.getByLabel('Titulo do filme').fill(title)
+        await this.page.getByLabel('Sinopse').fill(overview)
     }
 
 }
