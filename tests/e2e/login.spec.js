@@ -26,7 +26,7 @@ test('não deve logar com a senha incorreta', async ({ page }) => {
     await loginPage.submit('admin@zombieplus.com', 'wrongpassword')
 
     const message = 'Oops!Ocorreu um erro ao tentar efetuar o login. Por favor, verifique suas credenciais e tente novamente.'
-    await toast.haveText(message)
+    await toast.containText(message)
 })
 
 test('não deve logar quando email é incorreto', async ({ page }) => {

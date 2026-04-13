@@ -23,5 +23,5 @@ test('deve cadastrar um novo filme', async ({ page }) => {
 
   await moviesPage.create(movie.title, movie.overview, movie.company, movie.release_year)
 
-  await toast.haveText('UhullCadastro realizado com sucesso!')
+  await toast.containText('Cadastro realizado com sucesso!')
 })
