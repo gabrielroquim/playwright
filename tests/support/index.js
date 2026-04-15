@@ -9,9 +9,9 @@ const test = base.extend({
     page: async ({ page }, use) => {
         await use({
             ...page,
-            landingPage: new LandingPage(page),
-            loginPage: new LoginPage(page),
-            moviesPage: new MoviesPage(page),
+            landing: new LandingPage(page),
+            login: new LoginPage(page),
+            movies: new MoviesPage(page),
             toast: new Toast(page)
         })
     }
