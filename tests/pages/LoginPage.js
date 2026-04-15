@@ -24,13 +24,7 @@ export class LoginPage {
         await this.page.getByText('Entrar').click()
     }
 
-    async isLoggedIn() {
-        await this.page.waitForLoadState('networkidle')
-        //expressao regular para verificar se a URL contém /admin, indicando que o usuário foi redirecionado para a área de administração após o login bem-sucedido
-        await expect(this.page).toHaveURL(/.*admin/)
-    }
-
-    async alertHavetext(text) {
+    async alertHaveText(text) {
         const alert = this.page.locator('span[class$=alert]')
         await expect(alert).toHaveText(text)
     }
