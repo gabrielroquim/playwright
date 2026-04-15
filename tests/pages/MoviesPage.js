@@ -47,4 +47,8 @@ export class MoviesPage {
         //console.log(html)
     }
 
+    async alertHaveText(target) {
+        await expect(this.page.locator('.alert')).toHaveText(target)
+    }
+
 }
