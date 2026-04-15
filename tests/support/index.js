@@ -9,11 +9,13 @@ const test = base.extend({
     page: async ({ page }, use) => {
 
         const context = page
-        context['landingPage'] = new LandingPage(page)
-        context['loginPage'] = new LoginPage(page)
-        context['moviesPage'] = new MoviesPage(page)
+
+        context['landing'] = new LandingPage(page)
+        context['login'] = new LoginPage(page)
+        context['movies'] = new MoviesPage(page)
         context['toast'] = new Toast(page)
 
+        await use(context)
     }
 })
 
