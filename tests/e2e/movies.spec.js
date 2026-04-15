@@ -1,32 +1,17 @@
-import { test, expect } from '@playwright/test'
+import { test } from '../support/index'
 import data from '../support/fixtures/movies.json' assert { type: 'json' }
-
-import { LoginPage } from '../pages/LoginPage'
-import { MoviesPage } from '../pages/MoviesPage'
-import { Toast } from '../pages/Components'
 
 import { executeSQL } from '../support/fixtures/database'
 
-let loginPage
-let toast
-let moviesPage
-
-test.beforeEach(({ page }) => {
-  loginPage = new LoginPage(page)
-  toast = new Toast(page)
-  moviesPage = new MoviesPage(page)
-})
-
 test('deve cadastrar um novo filme', async ({ page }) => {
   const movie = data.create
+  await executeSQL(`DELETE FROM movies WHERE title = '${movie.title}';`)
+  
+  await page.loginPage.visit()
+  await page.loginPage.submit('admin@zombieplus.com', 'pwd123')
+  await page.moviesPage.isLoggedIn()
 
-  await executeSQL(`DELETE FROM movies WHERE title = '${movie.title}';
-  `)
-  await loginPage.visit()
-  await loginPage.submit('admin@zombieplus.com', 'pwd123')
-  await moviesPage.isLoggedIn()
+  await page.moviesPage.create(movie.title, movie.overview, movie.company, movie.release_year)
 
-  await moviesPage.create(movie.title, movie.overview, movie.company, movie.release_year)
-
-  await toast.containText('Cadastro realizado com sucesso!')
+  await page.toast.containText('Cadastro realizado com sucesso!')
 })
