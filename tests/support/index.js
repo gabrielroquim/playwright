@@ -1,4 +1,4 @@
-import { test as base } from "@playwright/test"
+import { test as base, expect } from "@playwright/test"
 
 import { LandingPage } from '../pages/LandingPage'
 import { LoginPage } from '../pages/LoginPage'
@@ -17,4 +17,4 @@ const test = base.extend({
     }
 })
 
-export { test }
+export { test, expect }
