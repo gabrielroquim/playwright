@@ -7,13 +7,13 @@ import { Toast } from '../pages/Components'
 
 const test = base.extend({
     page: async ({ page }, use) => {
-        await use({
-            ...page,
-            landing: new LandingPage(page),
-            login: new LoginPage(page),
-            movies: new MoviesPage(page),
-            toast: new Toast(page)
-        })
+
+        const context = page
+        context['landingPage'] = new LandingPage(page)
+        context['loginPage'] = new LoginPage(page)
+        context['moviesPage'] = new MoviesPage(page)
+        context['toast'] = new Toast(page)
+
     }
 })
 
