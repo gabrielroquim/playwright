@@ -53,4 +53,9 @@ export class Movies {
         await expect(this.page.locator('.alert')).toHaveText(target)
     }
 
+    async remove(title) {
+        await this.page.getByRole('row', { name: title }).getByRole('button').click()
+        await this.page.click('.confirm-removal')
+    }
+
 }
