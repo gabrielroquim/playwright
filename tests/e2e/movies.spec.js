@@ -17,6 +17,21 @@ test('deve cadastrar um novo filme', async ({ page }) => {
   await page.popup.haveText(`O filme '${movie.title}' foi adicionado ao catálogo.`)
 })
 
+test('deve poder remover um filme', async ({ page, request }) => {
+  const movie = data.to_remove
+  await request.api.postMovie(movie)
+
+  await page.login.do('admin@zombieplus.com', 'pwd123', 'Admin')
+
+  await page.click('.request-removal')
+  await page.click('.confirm-removal')
+  await page.popup.haveText('Filme removido com sucesso.')
+
+  // DICA  usando xpath//
+  // //td[text()="Dawn of the Dead"]/..//button
+
+})
+
 test('não deve cadastrar quando o título do filme já existe', async ({ page, request }) => {
   const movie = data.duplicate
 
