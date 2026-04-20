@@ -4,8 +4,16 @@
     "overview": "Um grupo de pessoas se refugia em uma fazenda enquanto zumbis sedentos por sangue invadem a área.",
     "company": "Warner Bros. Pictures",
     "release_year": 1970,
+    "featured": true,
+    "cover": "/covers/movies/mortos-vivos.jpg"
+  },
+    "duplicate": {
+    "title": "Resident Evil",
+    "overview": "Uma corporação secreta libera um vírus letal; uma equipe luta dentro de uma instalação para fechar a ameaça.",
+    "company": "Sony Pictures",
+    "release_year": 2002,
     "featured": false,
-    "cover": "/covers/mortos-vivos.jpg"
+    "cover": "/covers/movies/resident-evil.jpg"
   },
   "dawn_of_the_dead": {
     "title": "Dawn of the Dead",
@@ -13,15 +21,15 @@
     "company": "Paramount Pictures",
     "release_year": 1978,
     "featured": false,
-    "cover": "assets/covers/dawn_of_the_dead.png"
+    "cover": "/covers/movies/dawn_of_the_dead.png"
   },
   "day_of_the_dead": {
     "title": "Day of the Dead",
     "overview": "Cientistas e militares lutam para sobreviver em instalações subterrâneas durante o apocalipse zumbi.",
     "company": "Warner Bros. Pictures",
     "release_year": 1985,
-    "featured": false,
-    "cover": "assets/covers/day_of_the_dead.png"
+    "featured": true,
+    "cover": "/covers/movies/day_of_the_dead.png"
   },
   "28_days_later": {
     "title": "28 Days Later",
@@ -29,7 +37,7 @@
     "company": "Fox Entertainment",
     "release_year": 2002,
     "featured": false,
-    "cover": "assets/covers/28_days_later.png"
+    "cover": "/covers/movies/28_days_later.png"
   },
   "28_weeks_later": {
     "title": "28 Weeks Later",
@@ -37,7 +45,7 @@
     "company": "Fox Entertainment",
     "release_year": 2007,
     "featured": false,
-    "cover": "assets/covers/28_weeks_later.png"
+    "cover": "/covers/movies/28_weeks_later.png"
   },
   "shaun_of_the_dead": {
     "title": "Shaun of the Dead",
@@ -45,15 +53,15 @@
     "company": "Universal Pictures",
     "release_year": 2004,
     "featured": false,
-    "cover": "assets/covers/shaun_of_the_dead.png"
+    "cover": "/covers/movies/shaun_of_the_dead.png"
   },
   "zombieland": {
     "title": "Zombieland",
     "overview": "Em um EUA pós-apocalíptico, um grupo forma alianças improváveis enquanto busca segurança e diversão.",
     "company": "Columbia Pictures",
     "release_year": 2009,
-    "featured": false,
-    "cover": "assets/covers/zombieland.png"
+    "featured": true,
+    "cover": "/covers/movies/zombieland.png"
   },
   "zombieland_double_tap": {
     "title": "Zombieland: Double Tap",
@@ -61,31 +69,24 @@
     "company": "Columbia Pictures",
     "release_year": 2019,
     "featured": false,
-    "cover": "assets/covers/zombieland_double_tap.png"
+    "cover": "/covers/movies/zombieland_double_tap.png"
   },
   "world_war_z": {
     "title": "World War Z",
     "overview": "Um ex-investigador da ONU tenta encontrar a origem da pandemia que transformou milhões em monstros.",
     "company": "Paramount Pictures",
     "release_year": 2013,
-    "featured": false,
-    "cover": "assets/covers/world_war_z.png"
+    "featured": true,
+    "cover": "/covers/movies/world_war_z.png"
   },
-  "resident_evil": {
-    "title": "Resident Evil",
-    "overview": "Uma corporação secreta libera um vírus letal; uma equipe luta dentro de uma instalação para fechar a ameaça.",
-    "company": "Sony Pictures",
-    "release_year": 2002,
-    "featured": false,
-    "cover": "assets/covers/resident_evil.png"
-  },
+
   "resident_evil_apocalypse": {
     "title": "Resident Evil: Apocalypse",
     "overview": "A cidade está isolada e os sobreviventes devem encontrar uma saída enquanto a epidemia se espalha.",
     "company": "Sony Pictures",
     "release_year": 2004,
-    "featured": false,
-    "cover": "assets/covers/resident_evil_apocalypse.png"
+    "featured": true,
+    "cover": "/covers/movies/resident_evil_apocalypse.png"
   },
   "train_to_busan": {
     "title": "Train to Busan",
@@ -93,7 +94,7 @@
     "company": "Netflix",
     "release_year": 2016,
     "featured": false,
-    "cover": "assets/covers/train_to_busan.png"
+    "cover": "/covers/movies/train_to_busan.png"
   },
   "peninsula": {
     "title": "Peninsula",
@@ -101,7 +102,7 @@
     "company": "Netflix",
     "release_year": 2020,
     "featured": false,
-    "cover": "assets/covers/peninsula.png"
+    "cover": "/covers/movies/peninsula.png"
   },
   "rec": {
     "title": "REC",
@@ -109,7 +110,7 @@
     "company": "Lionsgate Films",
     "release_year": 2007,
     "featured": false,
-    "cover": "assets/covers/rec.png"
+    "cover": "/covers/movies/rec.png"
   },
   "the_girl_with_all_the_gifts": {
     "title": "The Girl with All the Gifts",
@@ -117,7 +118,7 @@
     "company": "Lionsgate Films",
     "release_year": 2016,
     "featured": false,
-    "cover": "assets/covers/the_girl_with_all_the_gifts.png"
+    "cover": "/covers/movies/the_girl_with_all_the_gifts.png"
   },
   "train_to_busan_presents_peninsula": {
     "title": "Train to Busan Presents: Peninsula",
@@ -125,23 +126,23 @@
     "company": "Netflix",
     "release_year": 2020,
     "featured": false,
-    "cover": "assets/covers/peninsula_alt.png"
+    "cover": "/covers/movies/peninsula_alt.png"
   },
   "return_of_the_living_dead": {
     "title": "Return of the Living Dead",
     "overview": "Zumbis que falam e procuram por cérebros criam caos numa trama que mistura terror e humor.",
     "company": "Warner Bros. Pictures",
     "release_year": 1985,
-    "featured": false,
-    "cover": "assets/covers/return_of_the_living_dead.png"
+    "featured": true,
+    "cover": "/covers/movies/return_of_the_living_dead.png"
   },
   "day_of_the_triffids_zombie_like": {
     "title": "Day of the Triffids (zombie-like)",
     "overview": "Embora não estritamente zumbi, uma catástrofe transforma a sociedade e cria monochromic threats.",
     "company": "Warner Bros. Pictures",
     "release_year": 1990,
-    "featured": false,
-    "cover": "assets/covers/day_of_the_triffids.png"
+    "featured": true,
+    "cover": "/covers/movies/day_of_the_triffids.png"
   },
   "i_am_legend": {
     "title": "I Am Legend",
@@ -149,7 +150,7 @@
     "company": "Warner Bros. Pictures",
     "release_year": 2007,
     "featured": false,
-    "cover": "assets/covers/i_am_legend.png"
+    "cover": "/covers/movies/i_am_legend.png"
   },
   "the_crazies": {
     "title": "The Crazies",
@@ -157,6 +158,6 @@
     "company": "Universal Pictures",
     "release_year": 2010,
     "featured": false,
-    "cover": "assets/covers/the_crazies.png"
+    "cover": "/covers/movies/the_crazies.png"
   }
 }

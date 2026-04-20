@@ -38,6 +38,11 @@ export class Movies {
         await this.page.locator('input[name=cover]')
             .setInputFiles('tests/support/fixtures' + movie.cover)
 
+
+        if (movie.featured) {
+            await this.page.locator('.featured .react-switch').click()
+        }
+
         await this.submit()
         //DICA vc quer pegar o log do que está acontecendo na página, para isso vc pode usar o console.log para imprimir o conteúdo da página, ou seja, o HTML da página, para isso vc pode usar o método content() do page, que retorna o HTML da página, e depois imprimir esse HTML no console, assim vc consegue ver o que está acontecendo na página e identificar possíveis erros ou problemas
         // const html = await this.page.content()
