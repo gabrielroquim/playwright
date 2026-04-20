@@ -19,22 +19,10 @@ test('deve cadastrar um novo filme', async ({ page }) => {
 
 test('não deve cadastrar quando o título do filme já existe', async ({ page, request }) => {
   const movie = data.duplicate
- 
 
-  const response = await request.post('http://localhost:3333/sessions', {
-    data: {
-      email: 'admin@zombieplus.com', 
-      password: 'pwd123'
-    }
-  })
-  const { token } = await response.json()
+  await request.api.setToken()
+  await request.api.postMovie(movie)
 
-  await request.post('http://localhost:3333/movies', {
-    headers: {
-      Authorization: `Bearer ${token}`
-    },
-    data: movie
-  })
   await page.login.do('admin@zombieplus.com', 'pwd123', 'Admin')
   await page.movies.create(movie)
   await page.toast.containText('Este conteúdo já encontra-se cadastrado no catálogo')
