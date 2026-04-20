@@ -23,8 +23,7 @@ test('deve poder remover um filme', async ({ page, request }) => {
 
   await page.login.do('admin@zombieplus.com', 'pwd123', 'Admin')
 
-  await page.click('.request-removal')
-  await page.click('.confirm-removal')
+  await page.movies.remove(movie.title)
   await page.popup.haveText('Filme removido com sucesso.')
 
   // DICA  usando xpath//
