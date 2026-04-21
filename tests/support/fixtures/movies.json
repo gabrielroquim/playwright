@@ -7,7 +7,7 @@
     "featured": true,
     "cover": "/covers/movies/mortos-vivos.jpg"
   },
-    "duplicate": {
+  "duplicate": {
     "title": "Resident Evil",
     "overview": "Uma corporação secreta libera um vírus letal; uma equipe luta dentro de uma instalação para fechar a ameaça.",
     "company": "Sony Pictures",
@@ -22,6 +22,49 @@
     "release_year": 1978,
     "featured": false,
     "cover": "/covers/movies/dawn_of_the_dead.png"
+  },
+  "search": {
+    "input": "zumbi",
+    "outputs": [
+      "Zombieland",
+      "Zombieland: Double Tap",
+      "Day zumbies of the Triffids (zombie-like)",
+      "meu namorado é um zumbi"
+    ],
+    "data": [
+      {
+        "title": "Zombieland",
+        "overview": "Em um EUA pós-apocalíptico, um grupo forma alianças improváveis enquanto busca segurança e diversão.",
+        "company": "Columbia Pictures",
+        "release_year": 2009,
+        "featured": true,
+        "cover": "/covers/movies/zombieland.png"
+      },
+      {
+        "title": "Zombieland: Double Tap",
+        "overview": "Os mesmos sobreviventes enfrentam novos tipos de zumbis e desafios enquanto viajam pelo país.",
+        "company": "Columbia Pictures",
+        "release_year": 2019,
+        "featured": false,
+        "cover": "/covers/movies/zombieland_double_tap.png"
+      },
+      {
+        "title": "Day zumbies of the Triffids (zombie-like)",
+        "overview": "Embora não estritamente zumbi, uma catástrofe transforma a sociedade e cria monochromic threats.",
+        "company": "Warner Bros. Pictures",
+        "release_year": 1990,
+        "featured": true,
+        "cover": "/covers/movies/day_of_the_triffids.png"
+      },
+      {
+        "title": "meu namorado é um zumbi",
+        "overview": "Elisabeth Bennet e Sr. Darcy unem forças para enfrentar uma ameaça zumbi inesperada.",
+        "company": "Paramount Pictures",
+        "release_year": 2000,
+        "featured": true,
+        "cover": "/covers/movies/warm-bodies.jpg"
+      }
+    ]
   },
   "day_of_the_dead": {
     "title": "Day of the Dead",
@@ -55,22 +98,6 @@
     "featured": false,
     "cover": "/covers/movies/shaun_of_the_dead.png"
   },
-  "zombieland": {
-    "title": "Zombieland",
-    "overview": "Em um EUA pós-apocalíptico, um grupo forma alianças improváveis enquanto busca segurança e diversão.",
-    "company": "Columbia Pictures",
-    "release_year": 2009,
-    "featured": true,
-    "cover": "/covers/movies/zombieland.png"
-  },
-  "zombieland_double_tap": {
-    "title": "Zombieland: Double Tap",
-    "overview": "Os mesmos sobreviventes enfrentam novos tipos de zumbis e desafios enquanto viajam pelo país.",
-    "company": "Columbia Pictures",
-    "release_year": 2019,
-    "featured": false,
-    "cover": "/covers/movies/zombieland_double_tap.png"
-  },
   "world_war_z": {
     "title": "World War Z",
     "overview": "Um ex-investigador da ONU tenta encontrar a origem da pandemia que transformou milhões em monstros.",
@@ -79,7 +106,6 @@
     "featured": true,
     "cover": "/covers/movies/world_war_z.png"
   },
-
   "resident_evil_apocalypse": {
     "title": "Resident Evil: Apocalypse",
     "overview": "A cidade está isolada e os sobreviventes devem encontrar uma saída enquanto a epidemia se espalha.",
@@ -135,14 +161,6 @@
     "release_year": 1985,
     "featured": true,
     "cover": "/covers/movies/return_of_the_living_dead.png"
-  },
-  "day_of_the_triffids_zombie_like": {
-    "title": "Day of the Triffids (zombie-like)",
-    "overview": "Embora não estritamente zumbi, uma catástrofe transforma a sociedade e cria monochromic threats.",
-    "company": "Warner Bros. Pictures",
-    "release_year": 1990,
-    "featured": true,
-    "cover": "/covers/movies/day_of_the_triffids.png"
   },
   "i_am_legend": {
     "title": "I Am Legend",

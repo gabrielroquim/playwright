@@ -52,4 +52,18 @@ test('não deve cadastrar quando os campos obrigatórios não são preenchidos',
     'Campo obrigatório',
     'Campo obrigatório'
   ])
-}) 
+})
+
+test('deve realizar busca pelo termo "zumbi"', async ({ page, request }) => {
+  const movies = data.search
+
+  movies.data.forEach(async (m) => {
+
+    await request.api.postMovie(m)
+    //  console.log(m.title) para ver os filmes que estão sendo validados
+
+  })
+  await page.login.do('admin@zombieplus.com', 'pwd123', 'Admin')
+  await page.search.go(movies.input)
+
+})

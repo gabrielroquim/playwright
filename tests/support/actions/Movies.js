@@ -49,6 +49,13 @@ export class Movies {
         //console.log(html)
     }
 
+    async search(target) {
+        await this.page.getByPlaceholder('Busque pelo nome')
+            .fill(target)
+
+            await this.page.click('.actions button')
+    }
+
     async alertHaveText(target) {
         await expect(this.page.locator('.alert')).toHaveText(target)
     }
