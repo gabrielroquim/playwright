@@ -1,6 +1,10 @@
-import { test, expect  } from '../support'
+import { test, expect } from '../support'
 import { faker } from '@faker-js/faker'
+import { executeSQL } from '../support/fixtures/database'
 
+test.beforeAll(async () => {
+  await executeSQL('DELETE FROM leads;')
+})
 
 test('deve cadastrar um novo lead na fila de espera', async ({ page }) => {
   const leadName = faker.person.fullName()
@@ -19,7 +23,7 @@ test('nao deve cadastrar quando o email já existe', async ({ page, request }) =
   const leadName = faker.person.fullName()
   const leadEmail = faker.internet.email()
 
- const newLead = await request.post('http://localhost:3333/leads', {
+  const newLead = await request.post('http://localhost:3333/leads', {
     data: {
       name: leadName,
       email: leadEmail
