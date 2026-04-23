@@ -19,7 +19,7 @@ test('deve cadastrar um novo lead na fila de espera', async ({ page }) => {
 });
 
 
-test('nao deve cadastrar quando o email já existe', async ({ page, request }) => {
+test('não deve cadastrar quando o email já existe', async ({ page, request }) => {
   const leadName = faker.person.fullName()
   const leadEmail = faker.internet.email()
 
@@ -40,7 +40,7 @@ test('nao deve cadastrar quando o email já existe', async ({ page, request }) =
   await page.popup.haveText(message)
 });
 
-test('nao deve cadastrar com email incorreto', async ({ page }) => {
+test('não deve cadastrar com email incorreto', async ({ page }) => {
   await page.leads.visit()
   await page.leads.openLeadModal()
   await page.leads.submitLeadForm('GabsQA qualidade', 'gabsqaqualidades.com.br')
@@ -48,7 +48,7 @@ test('nao deve cadastrar com email incorreto', async ({ page }) => {
   await page.leads.alertHaveText('Email incorreto')
 });
 
-test('nao deve cadastrar quando o nome não é informado', async ({ page }) => {
+test('não deve cadastrar quando o nome não é informado', async ({ page }) => {
   await page.leads.visit()
   await page.leads.openLeadModal()
   await page.leads.submitLeadForm('', 'gabsqa@qualidades.com.br')
@@ -56,7 +56,7 @@ test('nao deve cadastrar quando o nome não é informado', async ({ page }) => {
   await page.leads.alertHaveText('Campo obrigatório')
 });
 
-test('nao deve cadastrar quando o email nao é informado', async ({ page }) => {
+test('não deve cadastrar quando o email não é informado', async ({ page }) => {
   await page.leads.visit()
   await page.leads.openLeadModal()
   await page.leads.submitLeadForm('GabsQAs qualidade', '')
