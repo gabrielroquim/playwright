@@ -30,7 +30,7 @@ export default defineConfig({
 
   reporter: [
     ['dot'],
-   ['playwright-tesults-reporter', {'tesults-target': 'token'}]
+   ['playwright-tesults-reporter', {'tesults-target': process.env.TOKEN}]
   ],
 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
